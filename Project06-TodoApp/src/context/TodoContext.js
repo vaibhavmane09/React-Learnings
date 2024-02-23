@@ -1,21 +1,21 @@
 import { createContext, useContext } from "react";
 
 export const TodoContext = createContext({
-    todos: [
-        {
-            id: 1,
+    todos: [            // array - 
+        {   // fields 
+            id: 1,                
             todo: "Todo Msg",
             completed: false
         }
     ],
-    addTodo: (todo) => {},
-    updateTodo: (id, todo) => {},
-    deleteTodo: (id) => {},
+    addTodo: (todo) => {},      // methods - their functionality written in App.jsx
+    updateTodo: (id, todo) => {},       
+    deleteTodo: (id) => {},     
     toggleComplete: (id) => {}
 })
 
-export const useTodo = () => {
-    return useContext(TodoContext)
+export const useTodo = () => {        // context hook - a method
+    return useContext(TodoContext)    // useContext ko ek context dena i padega 
 }
 
-export const TodoProvider = TodoContext.Provider
+export const TodoProvider = TodoContext.Provider    // provider exporter
