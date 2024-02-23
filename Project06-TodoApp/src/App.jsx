@@ -28,31 +28,33 @@ function App() {
         completed: !prevTodo.completed } : prevTodo)) // here we check if prevTodo.id is equals id if yes -- we take all prevTodo values and only override the completed value 
   }
 
+  
   // local storage 
-  //localStorage.getItem("todos")  //  local storage always save values in   string format wee have to convert it in json 
-  // useEffect(() => {
-    // const todos = JSON.parse(localStorage.getItem("todos"))
+  //localStorage.getItem("todos")  //  local storage always save values in  string format wee have to convert it in json 
 
-    // if (todos && todos.length > 0) {
-      // setTodos(todos)
-    // }
-  // }, [])
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"))
 
-  // useEffect(() => {   // we can add more than one useEffect in react 
-    // localStorage.setItem("todos", JSON.stringify(todos))   // setting item in local storage ---- JSON.stringify is use to convert in string
-  // },[todos])
+    if (todos && todos.length > 0) {
+      setTodos(todos)
+    }
+  }, [])
+
+
+  useEffect(() => {   // we can add more than one useEffect in react 
+    localStorage.setItem("todos", JSON.stringify(todos))   // setting item in local storage ---- JSON.stringify is use to convert in string
+  },[todos])
 
 
 
   return (
     <>
       <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
-      <h1 className="text-center text-3xl bg-slate-500 p-4 rounded-lg text-white font-bold">
-        Todo Application Using Context API & Local Storage 
-      </h1>
-
-      <div className="bg-[#172842] min-h-screen  py-8">
-        <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+      <div className="bg-[#172842] min-h-screen py-1 ">
+        <h1 className="text-center text-3xl bg-slate-500 p-4 rounded-lg text-white font-bold">
+          Todo Application Using Context API & Local Storage 
+        </h1>
+        <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-4 text-white">
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">
             Manage Your Todos
           </h1>
