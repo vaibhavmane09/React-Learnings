@@ -26,7 +26,7 @@ function App() {
 
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
-      <h1 className="text-3xl rounded-lg text-center p-4 bg-slate-400"> Vaibhav Mane </h1>
+      <h1 className="text-3xl rounded-lg text-center p-4 bg-slate-400"> Toggle Theme </h1>
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
