@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({username, btnText="Visit Me"}) {
+function Card({username, btnText="Visit Me"}) { // here username is mandatory and by default btnTText is passed
   return (
     <>
       <div className="relative h-[400px] w-[300px] rounded-md">

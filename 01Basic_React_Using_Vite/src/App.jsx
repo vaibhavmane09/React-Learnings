@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <Chai/>
-    <h1>chai aur react {username}</h1>  // variabe injuction
+    <h1>chai aur react {username}</h1>   {/* variable injuction */}
     <p>test para</p>
    </>
   )
