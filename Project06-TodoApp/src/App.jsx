@@ -53,7 +53,7 @@ function App() {
       <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
         <div className="bg-[#172842] min-h-screen py-1 ">
           <h1 className="text-center text-3xl bg-slate-500 p-4 rounded-lg text-white font-bold">
-            Todo Application Using Context API & Local Storage
+            Todo Application {/* Using Context API & Local Storage */}
           </h1>
           <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-4 text-white">
             <h1 className="text-2xl font-bold text-center mb-8 mt-2">
